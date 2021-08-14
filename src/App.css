@@ -1,0 +1,32 @@
+.homepage {
+  min-height: 100vh;
+  min-width: 80%;
+  margin-top: 100px;
+}
+
+.phone {
+  max-height: 20rem;
+  max-width: 20rem;
+  object-fit: cover;
+}
+
+.point {
+  height: 40vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3rem;
+  margin: 5rem 0rem 5rem 0rem;
+}
+
+.services {
+  padding: 5rem;
+}
+
+.product-page {
+  margin-top: 5rem;
+}
+
+.item-cards {
+  margin-top: 2rem;
+}

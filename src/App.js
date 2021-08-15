@@ -8,6 +8,7 @@ import Navigationbar from './components/Navbar';
 import AboutUsPage from './components/AboutUsPage';
 import Homepage from './components/Homepage';
 import Productpage from './components/Productpage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
             <Homepage />
           </Route>
         </Switch>
+
+        <Footer />
       </div>
     </Router>
   );

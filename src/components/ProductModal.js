@@ -1,11 +1,13 @@
 import axios from "axios";
 import { Modal,Button } from "react-bootstrap"
+import { useDispatch } from "react-redux";
+import { addproduct } from '../states/shoppingcartslice';
+
 
 
 const addtoCart = (product) => {
     console.log("added to cart");
-    console.log(product);
-}
+} 
 
 const handleBuy = async (product) => {
     console.log(product);
@@ -16,6 +18,8 @@ const handleBuy = async (product) => {
 }
 
 const ProductModal = ({ show,onHide,product }) => {
+
+    const dispatch = useDispatch();
 
     if(product===[]) {
         return(<div></div>)
@@ -33,10 +37,13 @@ const ProductModal = ({ show,onHide,product }) => {
                 {product.price}
             </Modal.Body>
             <Button variant="primary" onClick={() =>{
-                addtoCart(product)}
+                addtoCart(product)
+                dispatch(addproduct(product))
+            }
             }>Cart</Button>
             <Button variant="primary" onClick={() =>{
-                handleBuy(product)}
+                handleBuy(product)
+            }
             }>Buy</Button>
         </Modal>
     )

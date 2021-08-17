@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {Card} from 'react-bootstrap'
+import CartModal from './CartModal';
 import ProductModal from './ProductModal';
 
 
@@ -59,6 +60,7 @@ const Productpage = () => {
                     onHide={() => setModalShow(false)}
                     product={selectedproduct}
                 />
+                <CartModal />
             </div>
         </div>
     )

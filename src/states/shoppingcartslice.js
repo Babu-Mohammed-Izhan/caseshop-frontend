@@ -10,10 +10,12 @@ const shoppingcartSlice = createSlice({
     reducers: {
         addproduct(state,action) {
             console.log(action)
+            console.log(state)
              state.products = [...state.products, action.payload]
         },
         removeproduct(state,action) {
-            state.products = state.products.filter((product) => product.name !== action.payload.name)
+            console.log(action)
+            state.products = state.products.filter((product) => product.title !== action.payload.title)
         },
     },
 })

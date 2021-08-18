@@ -9,7 +9,7 @@ const addtoCart = (product) => {
     console.log("added to cart");
 } 
 
-const handleBuy = async (product) => {
+export const handleBuy = async (product) => {
     console.log(product);
     console.log("bought the case");
     const response = await axios.post('http://localhost:3001/create-checkout-session',product)

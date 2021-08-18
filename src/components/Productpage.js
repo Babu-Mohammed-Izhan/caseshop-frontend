@@ -4,37 +4,37 @@ import CartModal from './CartModal';
 import ProductModal from './ProductModal';
 
 
-const Productpage = () => {
+const Productpage = ({cartShow, setcartShow}) => {
     const [modalShow, setModalShow] = useState(false);
     const [selectedproduct, setSelectedproduct] = useState([])
     const products=[
         {
             title:"phone1",
-            price:"10.99"
+            price:10.99
         },
         {
             title:"phone2",
-            price:"10.99"
+            price:10.99
         },
         {
             title:"phone3",
-            price:"10.99"
+            price:10.99
         },
         {
             title:"phone4",
-            price:"10.99"
+            price:10.99
         },
         {
             title:"phone5",
-            price:"10.99"
+            price:10.99
         },
         {
             title:"phone6",
-            price:"10.99"
+            price:10.99
         },
         {
             title:"phone7",
-            price:"10.99"
+            price:10.99
         }
     ]
     return (
@@ -42,7 +42,6 @@ const Productpage = () => {
             <div className="row row-cols-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5">
                 {products.map((product) => (
                     <div className="col item-cards items" key={product.title} onClick={() => {
-
                         setSelectedproduct(product)
                         setModalShow(true)
                     }}>
@@ -60,7 +59,10 @@ const Productpage = () => {
                     onHide={() => setModalShow(false)}
                     product={selectedproduct}
                 />
-                <CartModal />
+                
+                <CartModal show={cartShow} onHide={() => setcartShow(false)}/>
+
+                
             </div>
         </div>
     )

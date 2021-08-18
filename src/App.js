@@ -9,12 +9,15 @@ import AboutUsPage from './components/AboutUsPage';
 import Homepage from './components/Homepage';
 import Productpage from './components/Productpage';
 import Footer from './components/Footer';
+import { useState } from 'react';
 
 function App() {
+
+  const [cartShow, setcartShow] = useState(false);
   return (
     <Router>
       <div className="App">
-        <Navigationbar />
+        <Navigationbar handlecartmodal={() => setcartShow(true)} />
 
 
         <Switch>
@@ -22,7 +25,7 @@ function App() {
             <AboutUsPage />
           </Route>
           <Route path="/products">
-            <Productpage />
+            <Productpage cartShow={cartShow} setcartShow={setcartShow} />
           </Route>
           <Route path="/">
             <Homepage />

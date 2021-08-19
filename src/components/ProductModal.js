@@ -32,19 +32,37 @@ const ProductModal = ({ show,onHide,product }) => {
             aria-labelledby="contained-modal-title-vcenter"
             centered
         >
-            <Modal.Body>
-                {product.title}
-                {product.price}
-            </Modal.Body>
-            <Button variant="primary" onClick={() =>{
-                addtoCart(product)
-                dispatch(addproduct(product))
-            }
-            }>Cart</Button>
-            <Button variant="primary" onClick={() =>{
-                handleBuy(product)
-            }
-            }>Buy</Button>
+            <div className="row">
+                <div className="col phonecase-image">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eos vitae tempora nulla et debitis veritatis corrupti, rerum nihil dignissimos sunt praesentium nam hic molestiae laudantium libero culpa error similique!
+                </div>
+                <div className="col product-details">
+                    <div className="product-details-text">
+                        <h2 className="product-title">
+                            {product.title}
+                        </h2>
+                        <h3 className="product-price">
+                            {product.price}
+                        </h3>
+                    </div>
+                    <div className="product-modal-buttons">
+                        <Button variant="dark"
+                        className="cart-button cart-button-wrapper"
+                         onClick={() =>{
+                            addtoCart(product)
+                            onHide()
+                            dispatch(addproduct(product))
+                        }
+                        }>Cart</Button>
+                        <Button variant="dark" 
+                        className="buy-button buy-button-wrapper"
+                        onClick={() =>{
+                            handleBuy(product)
+                        }
+                        }>Buy</Button>
+                    </div>   
+                </div>
+            </div>
         </Modal>
     )
 }

@@ -1,3 +1,5 @@
+import { useEffect } from "react"
+import { useState } from "react"
 import { Modal,Button } from "react-bootstrap"
 import { useSelector,useDispatch } from 'react-redux'
 import { removeproduct } from "../states/shoppingcartslice"
@@ -5,9 +7,19 @@ import { handleBuy } from "./ProductModal"
 
 
 const CartModal = ({ show,onHide }) => {
+    const [totalprice, setTotalprice] = useState(0)
 
     const products = useSelector((state) => state.products)
     const dispatch = useDispatch()
+
+    useEffect(() => {
+
+        const totalprice = products.reduce((sum, current) => sum+current.price,0)
+        setTotalprice(totalprice)
+        console.log(totalprice)
+
+    },[products])
+
 
     return (
         <Modal
@@ -16,13 +28,15 @@ const CartModal = ({ show,onHide }) => {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered>
-            {
+            <div className="row">
+                <div className="col">
+                {
                 products.map((product) => {
                     return (
-                        <div key={product.title}>
+                        <div key={product.title} className="product-cart-cards">
                             {product.title}
                             {product.price}
-                            <Button variant="primary" onClick={() => {
+                            <Button variant="danger" onClick={() => {
                                 dispatch(removeproduct(product))
                             }}>
                                 Cancel
@@ -30,17 +44,23 @@ const CartModal = ({ show,onHide }) => {
                         </div>
                     )
                 })
-            }
-
-            <Button
-            onClick={() => {
-                const totalprice = products.reduce((sum, current) => sum+current.price,0)
-                console.log(totalprice)
-                handleBuy({title:"multiple items", price:totalprice})
-            }} 
-            >
-                Buy
-            </Button>
+                }
+                </div>
+                <div className="col summary-column">
+                    <h3 className="total-price">
+                    Total Price: {totalprice}
+                    </h3>
+                    <Button
+                    variant="dark"
+                    className="cart-buy-button cart-buy"
+                    onClick={() => {
+                        handleBuy({title:"multiple items", price:totalprice})
+                    }} 
+                    >
+                        Buy
+                    </Button>
+                </div>
+            </div>
         </Modal>
     )
 }

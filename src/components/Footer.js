@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook,faTwitter,faInstagram,faCcVisa,faCcMastercard,faCcPaypal,faCcAmex, faLinkedin} from '@fortawesome/free-brands-svg-icons'
+
 const Footer = () => {
     return (
         <div className="footer-hny py-5 bg-dark">
@@ -8,14 +11,13 @@ const Footer = () => {
                       <p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio consectetur.Vivamus
                           a ligula quam. Ut blandit eu leo non suscipit. </p>
                       <ul className="social-footerhny mt-lg-5 mt-4">
-
-                          <li><span className="fa fa-facebook" aria-hidden="true"></span>
+                          <li><FontAwesomeIcon className="fa-icons fontsawesome" icon={faFacebook} />
                           </li>
-                          <li><span className="fa fa-twitter" aria-hidden="true"></span>
+                          <li><FontAwesomeIcon className="fa-icons fontsawesome" icon={faTwitter} />
                           </li>
-                          <li><span className="fa fa-google-plus" aria-hidden="true"></span>
+                          <li><FontAwesomeIcon className="fa-icons fontsawesome" icon={faInstagram} />
                           </li>
-                          <li><span className="fa fa-instagram" aria-hidden="true"></span>
+                          <li><FontAwesomeIcon className="fa-icons fontsawesome" icon={faLinkedin} />
                           </li>
                       </ul>
                   </div>
@@ -25,21 +27,17 @@ const Footer = () => {
                       <div className="sub-columns">
                           <div className="sub-two-right">
                               <h6>Our Store</h6>
-                              <p className="mb-5">49436 Broaddus Honey Court Avenue, Madisonville KY 95020, United States of America</p>
+                              <p className="mb-4">49436 Broaddus Honey Court Avenue, Madisonville KY 95020, United States of America</p>
 
                               <h6>We accept:</h6>
                               <ul>
-                                  <li><span className="fa fa-cc-visa"
-                                              aria-hidden="true"></span>
+                                  <li><FontAwesomeIcon className="fa-icons fontsawesome" icon={faCcVisa} />
                                   </li>
-                                  <li><span className="fa fa-cc-mastercard"
-                                              aria-hidden="true"></span>
+                                  <li><FontAwesomeIcon className="fa-icons fontsawesome" icon={faCcMastercard} />
                                   </li>
-                                  <li><span className="fa fa-cc-paypal"
-                                              aria-hidden="true"></span>
+                                  <li><FontAwesomeIcon className="fa-icons fontsawesome" icon={faCcPaypal} />
                                   </li>
-                                  <li><span className="fa fa-cc-amex"
-                                              aria-hidden="true"></span>
+                                  <li><FontAwesomeIcon className="fa-icons fontsawesome" icon={faCcAmex} />
                                   </li>
                               </ul>
                           </div>

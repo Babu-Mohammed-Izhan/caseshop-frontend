@@ -29,24 +29,30 @@ const CartModal = ({ show,onHide }) => {
         aria-labelledby="contained-modal-title-vcenter"
         centered>
             <div className="row">
-                <div className="col">
-                {
-                products.map((product) => {
-                    return (
-                        <div key={product.title} className="product-cart-cards">
-                            {product.title}
-                            {product.price}
-                            <Button variant="danger" onClick={() => {
-                                dispatch(removeproduct(product))
-                            }}>
-                                Cancel
-                            </Button>
-                        </div>
-                    )
-                })
+                <div className="col col-lg-8 col-12">
+                    {products.length>0 ?
+                    <div className="filled-cart">
+                        {products.map((product) => {
+                            return (
+                                <div key={product.title} className="product-cart-cards">
+                                    {product.title}
+                                    {product.price}
+                                    <Button variant="danger" onClick={() => {
+                                        dispatch(removeproduct(product))
+                                    }}>
+                                        Cancel
+                                    </Button>
+                                </div>
+                            )
+                        }) }
+                    </div>
+                :
+                <div className="empty-cart">
+                    <h2 className="empty-cart-info">The cart is Empty</h2>
+                </div>
                 }
                 </div>
-                <div className="col summary-column">
+                <div className="col col-lg-4 col-12 summary-column">
                     <h3 className="total-price">
                     Total Price: {totalprice}
                     </h3>

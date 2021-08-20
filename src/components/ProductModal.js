@@ -33,10 +33,10 @@ const ProductModal = ({ show,onHide,product }) => {
             centered
         >
             <div className="row">
-                <div className="col phonecase-image">
+                <div className="col col-12 col-lg-6 phonecase-image">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eos vitae tempora nulla et debitis veritatis corrupti, rerum nihil dignissimos sunt praesentium nam hic molestiae laudantium libero culpa error similique!
                 </div>
-                <div className="col product-details">
+                <div className="col col-12 col-lg-6 product-details">
                     <div className="product-details-text">
                         <h2 className="product-title">
                             {product.title}

@@ -76,7 +76,7 @@ const Productpage = ({ cartShow, setcartShow }) => {
               </div>
               <div className="text-center">
                 <h5>{product.title}</h5>{" "}
-                <span className="text-success">{product.price}</span>
+                <span className="text-success">Rs {product.price}</span>
               </div>
             </Card>
           </div>

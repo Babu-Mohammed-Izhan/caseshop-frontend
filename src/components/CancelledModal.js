@@ -9,8 +9,13 @@ const CancelledModal = ({ show, onHide }) => {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      This is the cancelled Modal. If there are any concerns or complaints
-      Please contact our customer service.Thank you.
+      <div>
+        <div>You have cancelled your order.</div>
+        <div>
+          If there are any concerns or complaints, Please contact our customer
+          service.Thank you.
+        </div>
+      </div>
     </Modal>
   );
 };

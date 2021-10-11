@@ -9,7 +9,13 @@ const SuccessModal = ({ show, onHide }) => {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      This is the success page modal.
+      <div>
+        <div>Thank you for buying at Casey.</div>
+        <div>
+          Your order has been recorded and it will be shipped in 3-5 business
+          days.
+        </div>
+      </div>
     </Modal>
   );
 };

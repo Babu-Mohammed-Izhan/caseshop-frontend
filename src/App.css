@@ -141,3 +141,8 @@ li {
   justify-content: center;
   flex-direction: column;
 }
+
+.about-us-wrapper {
+  margin-top: 5rem;
+  min-height: 90vh;
+}

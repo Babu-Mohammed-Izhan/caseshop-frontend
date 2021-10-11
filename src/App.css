@@ -127,3 +127,17 @@ li {
   width: 40px;
   height: 30px;
 }
+
+.success-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cancelled-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

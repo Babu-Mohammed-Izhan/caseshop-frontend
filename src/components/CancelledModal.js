@@ -9,7 +9,7 @@ const CancelledModal = ({ show, onHide }) => {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <div>
+      <div className="cancelled-wrapper">
         <div>You have cancelled your order.</div>
         <div>
           If there are any concerns or complaints, Please contact our customer

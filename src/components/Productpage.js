@@ -2,45 +2,54 @@ import { useState } from "react";
 import { Card } from "react-bootstrap";
 import CartModal from "./CartModal";
 import ProductModal from "./ProductModal";
+import SuccessModal from "./SuccessModal";
+import CancelledModal from "./CancelledModal";
 import { useLocation } from "react-router-dom";
 
 const Productpage = ({ cartShow, setcartShow }) => {
   const [modalShow, setModalShow] = useState(false);
+  const [successmodalShow, setsuccessModalShow] = useState(false);
+  const [cancelledmodalShow, setcancelledModalShow] = useState(false);
   const [selectedproduct, setSelectedproduct] = useState([]);
 
   const search = useLocation().search;
   const success = new URLSearchParams(search).get("success");
-  const canceled = new URLSearchParams(search).get("canceled");
-  console.log(success, canceled);
+  const cancelled = new URLSearchParams(search).get("canceled");
+  if (success) {
+    setsuccessModalShow(true);
+  }
+  if (cancelled) {
+    setcancelledModalShow(true);
+  }
 
   const products = [
     {
       title: "phone1",
-      price: 10.99,
+      price: 300,
     },
     {
       title: "phone2",
-      price: 10.99,
+      price: 300,
     },
     {
       title: "phone3",
-      price: 10.99,
+      price: 300,
     },
     {
       title: "phone4",
-      price: 10.99,
+      price: 300,
     },
     {
       title: "phone5",
-      price: 10.99,
+      price: 300,
     },
     {
       title: "phone6",
-      price: 10.99,
+      price: 300,
     },
     {
       title: "phone7",
-      price: 10.99,
+      price: 300,
     },
   ];
   return (
@@ -78,6 +87,15 @@ const Productpage = ({ cartShow, setcartShow }) => {
           product={selectedproduct}
         />
         <CartModal show={cartShow} onHide={() => setcartShow(false)} />
+
+        <SuccessModal
+          show={successmodalShow}
+          onHide={() => setsuccessModalShow(false)}
+        />
+        <CancelledModal
+          show={cancelledmodalShow}
+          onHide={() => setcancelledModalShow(false)}
+        />
       </div>
     </div>
   );

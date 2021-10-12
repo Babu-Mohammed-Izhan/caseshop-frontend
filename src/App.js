@@ -1,31 +1,26 @@
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import Navigationbar from './components/Navbar';
-import AboutUsPage from './components/AboutUsPage';
-import Homepage from './components/Homepage';
-import Productpage from './components/Productpage';
-import Footer from './components/Footer';
-import { useState } from 'react';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navigationbar from "./components/Navbar";
+import AboutUsPage from "./components/AboutUsPage";
+import Homepage from "./components/Homepage";
+import Productpage from "./components/Productpage";
+import CartModal from "./components/CartModal";
+import Footer from "./components/Footer";
+import { useState } from "react";
 
 function App() {
-
   const [cartShow, setcartShow] = useState(false);
   return (
     <Router>
       <div className="App">
         <Navigationbar handlecartmodal={() => setcartShow(true)} />
 
-
         <Switch>
           <Route path="/about">
             <AboutUsPage />
           </Route>
           <Route path="/products">
-            <Productpage cartShow={cartShow} setcartShow={setcartShow} />
+            <Productpage />
           </Route>
           <Route path="/">
             <Homepage />
@@ -34,6 +29,7 @@ function App() {
 
         <Footer />
       </div>
+      <CartModal show={cartShow} onHide={() => setcartShow(false)} />
     </Router>
   );
 }

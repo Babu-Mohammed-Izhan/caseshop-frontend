@@ -86,7 +86,6 @@ const Productpage = ({ cartShow, setcartShow }) => {
           onHide={() => setModalShow(false)}
           product={selectedproduct}
         />
-        <CartModal show={cartShow} onHide={() => setcartShow(false)} />
 
         <SuccessModal
           show={successmodalShow}

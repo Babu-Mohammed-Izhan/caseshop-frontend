@@ -33,16 +33,13 @@ const ProductModal = ({ show, onHide, product }) => {
       centered
     >
       <div className="row">
-        <div className="col col-12 col-lg-6 phonecase-image">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eos
-          vitae tempora nulla et debitis veritatis corrupti, rerum nihil
-          dignissimos sunt praesentium nam hic molestiae laudantium libero culpa
-          error similique!
+        <div className="col col-12 col-lg-6 phonecase-image d-flex align-items-center justify-content-center">
+          <img src={product.img} width="250" alt="" />
         </div>
         <div className="col col-12 col-lg-6 product-details">
           <div className="product-details-text">
             <h2 className="product-title">{product.title}</h2>
-            <h3 className="product-price">{product.price}</h3>
+            <h3 className="product-price">Rs {product.price}</h3>
           </div>
           <div className="product-modal-buttons">
             <Button

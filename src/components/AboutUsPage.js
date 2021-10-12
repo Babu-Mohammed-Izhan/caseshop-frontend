@@ -1,6 +1,6 @@
 const AboutUsPage = () => {
   return (
-    <div className="container about-us-wrapper">
+    <div className="container about-us-wrapper d-flex align-items-center justify-content-center">
       <h2>
         Casey case shop is an ecommerce project created <br />
         by Babu Mohammed Izhan.

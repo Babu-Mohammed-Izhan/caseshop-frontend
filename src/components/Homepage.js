@@ -23,22 +23,28 @@ const Homepage = () => {
           </div>
         </section>
       </div>
-      <Row className="point-1 point">
-        <Col xs={6}>High Quality Materials</Col>
-        <Col xs={6}>
+      <Row className="point-1 point ">
+        <Col md={6} xs={12}>
+          High Quality Materials
+        </Col>
+        <Col md={6} xs={12}>
           <img src={phone1} className="phone" alt="phone1" />
         </Col>
       </Row>
       <Row className="point-2 point">
-        <Col xs={6}>
-          <img src={phone2} className="phone" alt="phone1" />
+        <Col md={6} xs={12}>
+          <img src={phone2} className="phone" alt="phone2" />
         </Col>
-        <Col xs={6}>Sleek Design</Col>
+        <Col md={6} xs={12}>
+          Sleek Design
+        </Col>
       </Row>
       <Row className="point-3 point">
-        <Col xs={6}>Cases for all phones</Col>
-        <Col xs={6}>
-          <img src={phone3} className="phone" alt="phone1" />
+        <Col md={6} xs={12}>
+          Cases for all phones
+        </Col>
+        <Col md={6} xs={12}>
+          <img src={phone3} className="phone" alt="phone3" />
         </Col>
       </Row>
       <div className="container bg-light h-100">

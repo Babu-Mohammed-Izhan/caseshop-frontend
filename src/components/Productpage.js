@@ -24,10 +24,10 @@ const Productpage = () => {
   }
 
   useEffect(() => {
-    axios.get(`${process.env.BASE_URL}/api/phoncase`).then((res) => {
+    axios.get(`${process.env.REACT_APP_BASE_URL}/api/phoncase`).then((res) => {
       setproducts(res.data);
     });
-  });
+  }, []);
 
   return (
     <div className="container product-page">

@@ -12,7 +12,7 @@ function App() {
   const [cartShow, setcartShow] = useState(false);
   return (
     <Router>
-      <div className="App">
+      <div className="App container">
         <Navigationbar handlecartmodal={() => setcartShow(true)} />
 
         <Switch>
@@ -26,10 +26,9 @@ function App() {
             <Homepage />
           </Route>
         </Switch>
-
+        <CartModal show={cartShow} onHide={() => setcartShow(false)} />
         <Footer />
       </div>
-      <CartModal show={cartShow} onHide={() => setcartShow(false)} />
     </Router>
   );
 }

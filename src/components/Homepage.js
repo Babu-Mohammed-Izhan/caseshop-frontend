@@ -1,4 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 const Homepage = () => {
   return (
     <Container variant="dark" className="homepage">
@@ -11,9 +13,9 @@ const Homepage = () => {
                   New Inspiration 2020
                 </p>
                 <h1 className="text-uppercase mb-3">20% off on new season</h1>
-                <a className="btn btn-dark" href="/product">
-                  Browse collections
-                </a>
+                <Link to="/products" className>
+                  <button className="btn btn-dark">Browse collections</button>
+                </Link>
               </div>
             </div>
           </div>

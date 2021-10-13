@@ -57,7 +57,7 @@ const ProductModal = ({ show, onHide, product }) => {
               variant="dark"
               className="buy-button buy-button-wrapper"
               onClick={() => {
-                handleBuy(product);
+                handleBuy({ ...product, quantity: 1 });
               }}
             >
               Buy

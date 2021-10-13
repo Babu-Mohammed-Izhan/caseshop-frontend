@@ -21,7 +21,7 @@ function App() {
           <Route path="/success">
             <SuccessPage />
           </Route>
-          <Route path="/cancelled">
+          <Route path="/canceled">
             <CancelledPage />
           </Route>
           <Route path="/about">

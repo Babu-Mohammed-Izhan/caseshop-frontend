@@ -34,10 +34,13 @@ const CartModal = ({ show, onHide }) => {
             <div className="filled-cart">
               {products.map((product) => {
                 return (
-                  <div key={product.title} className="product-cart-cards">
+                  <div
+                    key={product.title}
+                    className="product-cart-cards container"
+                  >
                     <img src={product.img} width="100" alt="" />
                     <h4>{product.title}</h4>
-                    <h4>{product.price}</h4>
+                    <h4>Rs. {product.price}</h4>
                     <Button
                       variant="danger"
                       onClick={() => {

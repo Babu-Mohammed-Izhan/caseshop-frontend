@@ -11,12 +11,22 @@
 }
 
 .point {
-  height: 40vh;
+  min-height: 40vh;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 3rem;
   margin: 5rem 0rem 5rem 0rem;
+}
+
+@media (max-width: 700px) {
+  .point.point-2 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .point {
+    margin: 3rem;
+  }
 }
 
 .services {
@@ -48,6 +58,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 3rem;
 }
 
 .total-price {

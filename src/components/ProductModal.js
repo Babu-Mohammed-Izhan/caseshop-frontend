@@ -46,9 +46,9 @@ const ProductModal = ({ show, onHide, product }) => {
               variant="dark"
               className="cart-button cart-button-wrapper"
               onClick={() => {
-                addtoCart(product);
+                addtoCart({ ...product, quantity: 1 });
                 onHide();
-                dispatch(addproduct(product));
+                dispatch(addproduct({ ...product, quantity: 1 }));
               }}
             >
               Add to Cart

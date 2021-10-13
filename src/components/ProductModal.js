@@ -11,7 +11,7 @@ export const handleBuy = async (product) => {
   console.log(product);
   console.log("bought the case");
   const response = await axios.post(
-    `${process.env.BASE_URL}/create-checkout-session`,
+    `${process.env.REACT_APP_BASE_URL}/create-checkout-session`,
     product
   );
   console.log(response);

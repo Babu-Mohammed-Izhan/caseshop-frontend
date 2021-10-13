@@ -65,7 +65,7 @@ const CartModal = ({ show, onHide }) => {
             variant="dark"
             className="cart-buy-button cart-buy"
             onClick={() => {
-              handleBuy({ title: "multiple items", price: totalprice });
+              handleBuy(products);
             }}
           >
             Buy

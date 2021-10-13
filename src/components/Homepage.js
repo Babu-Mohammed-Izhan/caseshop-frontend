@@ -1,8 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap";
-import phone1 from "../assets/images/tim-alex-m8IhgpM8kyQ-unsplash.jpg";
-import phone2 from "../assets/images/pexels-mnz-1670768.jpg";
-import phone3 from "../assets/images/arnel-hasanovic-4oWSXdeAS2g-unsplash.jpg";
-
 const Homepage = () => {
   return (
     <Container variant="dark" className="homepage">
@@ -28,12 +24,20 @@ const Homepage = () => {
           High Quality Materials
         </Col>
         <Col md={6} xs={12}>
-          <img src={phone1} className="phone" alt="phone1" />
+          <img
+            src="https://res.cloudinary.com/dm8ogh4lv/image/upload/v1634053451/midnight-cravings-violet-realme-realme-8-hard-case-1626503522_large_mc5b3a.jpg"
+            className="phone"
+            alt="phone1"
+          />
         </Col>
       </Row>
       <Row className="point-2 point">
         <Col md={6} xs={12}>
-          <img src={phone2} className="phone" alt="phone2" />
+          <img
+            src="https://res.cloudinary.com/dm8ogh4lv/image/upload/v1634053449/sugar-rush-peach-realme-realme-8-hard-case-1626518161_large_xfyx12.jpg"
+            className="phone"
+            alt="phone2"
+          />
         </Col>
         <Col md={6} xs={12}>
           Sleek Design
@@ -44,10 +48,14 @@ const Homepage = () => {
           Cases for all phones
         </Col>
         <Col md={6} xs={12}>
-          <img src={phone3} className="phone" alt="phone3" />
+          <img
+            src="https://res.cloudinary.com/dm8ogh4lv/image/upload/v1634053449/sweat-tooth-teal-realme-realme-8-hard-case-1626540121_large_e9mm8o.jpg"
+            className="phone"
+            alt="phone3"
+          />
         </Col>
       </Row>
-      <div className="container bg-light h-100">
+      <div className="bg-light h-100">
         <div className="row text-center services">
           <div className="col-lg-4 mb-3 mb-lg-0">
             <div className="d-inline-block">

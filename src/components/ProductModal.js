@@ -51,7 +51,7 @@ const ProductModal = ({ show, onHide, product }) => {
                 dispatch(addproduct(product));
               }}
             >
-              Cart
+              Add to Cart
             </Button>
             <Button
               variant="dark"

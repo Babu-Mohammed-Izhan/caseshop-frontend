@@ -6,6 +6,8 @@ import Homepage from "./components/Homepage";
 import Productpage from "./components/Productpage";
 import CartModal from "./components/CartModal";
 import Footer from "./components/Footer";
+import SuccessPage from "./components/SuccessPage";
+import CancelledPage from "./components/CancelledPage";
 import { useState } from "react";
 
 function App() {
@@ -16,6 +18,12 @@ function App() {
         <Navigationbar handlecartmodal={() => setcartShow(true)} />
 
         <Switch>
+          <Route path="/success">
+            <SuccessPage />
+          </Route>
+          <Route path="/cancelled">
+            <CancelledPage />
+          </Route>
           <Route path="/about">
             <AboutUsPage />
           </Route>

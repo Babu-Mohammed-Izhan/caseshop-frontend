@@ -11,7 +11,7 @@ const Homepage = () => {
                   New Inspiration 2020
                 </p>
                 <h1 className="text-uppercase mb-3">20% off on new season</h1>
-                <a className="btn btn-dark" href="/products">
+                <a className="btn btn-dark" href="/product">
                   Browse collections
                 </a>
               </div>

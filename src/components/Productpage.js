@@ -24,7 +24,7 @@ const Productpage = () => {
   }
 
   useEffect(() => {
-    axios.get("http://localhost:3001/api/phoncase").then((res) => {
+    axios.get(`${process.env.BASE_URL}/api/phoncase`).then((res) => {
       setproducts(res.data);
     });
   });

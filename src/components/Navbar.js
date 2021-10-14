@@ -6,7 +6,7 @@ const Navigationbar = ({ handlecartmodal }) => {
     <Navbar bg="white" variant="light" fixed="top" expand="sm">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          Casey
+          Cover Up
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">

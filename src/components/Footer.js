@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="container py-lg-5">
         <div className="text-txt row">
           <div className="left-side col-lg-4">
-            <h3>Casey</h3>
+            <h3>Cover Up</h3>
             <p>
               Wide variety of designs for a wide variety of phones. All at the
               click of a button.
@@ -55,8 +55,8 @@ const Footer = () => {
               <div className="sub-two-right">
                 <h6>Our Store</h6>
                 <p className="mb-4">
-                  49436 Broaddus Honey Court Avenue, Madisonville KY 95020,
-                  United States of America
+                  49436 Broaddus Honey Court Avenue, Madisonville MA 95020,
+                  INDIA
                 </p>
 
                 <h6>We accept:</h6>

@@ -8,7 +8,7 @@ const Homepage = () => {
         <section className="hero pb-3 bg-cover bg-center d-flex align-items-center">
           <div className="container py-5">
             <div className="row px-4 px-lg-5">
-              <div className="col-lg-6">
+              <div className=" text-section col-lg-6">
                 <p className="text-muted text-uppercase mb-2">
                   New Inspiration 2020
                 </p>
@@ -16,6 +16,13 @@ const Homepage = () => {
                 <Link to="/products" className>
                   <button className="btn btn-dark">Browse collections</button>
                 </Link>
+              </div>
+              <div className=" img-section col-lg-6">
+                <img
+                  src="https://res.cloudinary.com/dm8ogh4lv/image/upload/v1634053451/midnight-cravings-violet-realme-realme-8-hard-case-1626503522_large_mc5b3a.jpg"
+                  className="phone"
+                  alt="phone1"
+                />
               </div>
             </div>
           </div>

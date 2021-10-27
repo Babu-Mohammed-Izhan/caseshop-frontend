@@ -1,7 +1,35 @@
 .homepage {
   min-height: 100vh;
   min-width: 80%;
-  margin-top: 100px;
+}
+
+.hero {
+  min-height: 100vh;
+}
+
+.text-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.img-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .text-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5rem;
+  }
 }
 
 .phone {
